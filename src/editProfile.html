@@ -6,7 +6,9 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
+
     <title>Portfolio</title>
 </head>
 
@@ -22,46 +24,64 @@
     <main>
         <section>
             <form id="formularioPerfil">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" required>
-
-                <label for="puesto">Puesto</label>
-                <input type="text" id="puesto" required>
-
-                <label for="ubicacion">Ubicacion</label>
-                <input type="text" id="ubicacion" required>
-
-                <label for="estado">Estado</label>
-                <input type="text" id="estado" placeholder="Estudiante/Trabajando" required>
-
-                <label for="fotoPerfil">URL Foto de Perfil</label>
-                <input type="url" id="fotoPerfil" required>
-
-                <label for="linkedin">Linkedin</label>
-                <input type="url" id="linkedin" required>
-
-                <label for="github">Github</label>
-                <input type="url" id="github" required>
-
-                <label for="gmail">Gmail</label>
-                <input type="gmail" id="gmail" required>
-
-                <label for="x">X</label>
-                <input type="url" id="x" required>
-
-                <label for="tecnologias">Tecnologías <button type="button" onclick="agregarTecnologia()">Agregar Tecnología</button></label>
-                <input type="text" id="nuevaTecnologia" placeholder="Agregar nueva tecnología">
-                <ul id="tecnologias"></ul>
-
-                <label for="skills">Habilidades <button type="button" onclick="agregarHabilidad()">Agregar Habilidad</button></label>
-                <input type="text" id="nuevaHabilidad" placeholder="Agregar nueva habilidad">
-                
-                <ul id="skills"></ul>
-                <button type="submit">Guardar</button>
+                <div class="input-field">
+                    <input type="text" id="nombre" value="nombre" required>
+                    <label for="nombre" class="active">Nombre</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="puesto" value="puesto" required>
+                    <label for="puesto" class="active">Puesto</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="ubicacion" value="ubicacion" required>
+                    <label for="ubicacion" class="active">Ubicación</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="estado" value="estado" placeholder="Estudiante/Trabajando" required>
+                    <label for="estado" class="active">Estado</label>
+                </div>
+                <div class="input-field">
+                    <input type="url" id="fotoPerfil" value="https://example.com/imagen.jpg" required>
+                    <label for="fotoPerfil" class="active">URL Foto de Perfil</label>
+                </div>
+                <div class="input-field">
+                    <input type="url" id="linkedin" value="https://linkedin.com/es/usuario" required>
+                    <label for="linkedin" class="active">LinkedIn</label>
+                </div>
+                <div class="input-field">
+                    <input type="url" id="github" value="https://github.com/usuario" required>
+                    <label for="github" class="active">GitHub</label>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="gmail" value="usuario@gmail.com" required>
+                    <label for="gmail" class="active">Gmail</label>
+                </div>
+                <div class="input-field">
+                    <input type="url" id="x" value="https://x.com/usuario" required>
+                    <label for="x" class="active">X</label>
+                </div>
+            
+                <div class="input-field">
+                    <label for="tecnologias" class="active">Tecnologías</label>
+                    <input type="text" id="nuevaTecnologia" placeholder="Agregar nueva tecnología" class="validate">
+                    <button type="button" class="btn-small grey darken-2 white-text" onclick="agregarTecnologia()">Agregar Tecnología</button>
+                    <ul id="tecnologias" class="collection"></ul>
+                </div>
+            
+                <div class="input-field">
+                    <label for="skills" class="active">Habilidades</label>
+                    <input type="text" id="nuevaHabilidad" placeholder="Agregar nueva habilidad" class="validate">
+                    <button type="button" class="btn-small grey darken-2 white-text" onclick="agregarHabilidad()">Agregar Habilidad</button>
+                    <ul id="skills" class="collection"></ul>
+                </div>
+            
+                <button type="submit" class="btn waves-effect waves-light">Guardar</button>
             </form>
+            
         </section>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script type="module" src="editProfile.js"></script>
 </body>

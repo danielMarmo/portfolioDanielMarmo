@@ -213,10 +213,19 @@ main {
                 box-sizing: border-box;
                 padding-bottom: 1.5rem;
 
-                .btn {
+                .btn-project {
                     text-align: center;
                     display: inline-block;
                     width: 35%;
+                    padding: 10px 20px;
+                    border: 1px solid $secondary-color;
+                    border-radius: 5px;
+                }
+
+                .btn-project-edit {
+                    text-align: center;
+                    display: inline-block;
+                    width: 45%;
                     padding: 10px 20px;
                     border: 1px solid $secondary-color;
                     border-radius: 5px;
@@ -256,24 +265,6 @@ main {
                     i {
                         font-size: 20px;
                     }
-                }
-            }
-
-            .btns {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-                box-sizing: border-box;
-                padding-bottom: 1.5rem;
-
-                .btn {
-                    text-align: center;
-                    display: inline-block;
-                    width: 35%;
-                    padding: 10px 20px;
-                    border: 1px solid $secondary-color;
-                    border-radius: 5px;
                 }
             }
         }

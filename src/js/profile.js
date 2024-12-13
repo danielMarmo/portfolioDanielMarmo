@@ -39,27 +39,33 @@ function editarPerfil(datos) {
     tecnologiasList.innerHTML = '';
     datos.tecnologias.forEach(tec => {
         const li = document.createElement('li');
-        li.textContent = tec;
+        
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'x';
-        deleteButton.style.marginLeft = "10px"
-        deleteButton.style.padding = "5px 10px"
+        deleteButton.style.margin = "5px 10px"
+        deleteButton.style.padding = "5px 10px";
         deleteButton.onclick = () => eliminarTecnologia(tec);
-        li.appendChild(deleteButton);
+        
+        li.appendChild(deleteButton); 
+        li.appendChild(document.createTextNode(tec));
+        
         tecnologiasList.appendChild(li);
     });
-
+    
     const skillsList = document.getElementById('skills');
     skillsList.innerHTML = '';
     datos.skills.forEach(skill => {
         const li = document.createElement('li');
-        li.textContent = skill;
+        
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'x';
-        deleteButton.style.marginLeft = "10px"
+        deleteButton.style.margin = "5px 10px"
         deleteButton.style.padding = "5px 10px"
         deleteButton.onclick = () => eliminarHabilidad(skill);
+
         li.appendChild(deleteButton);
+        li.appendChild(document.createTextNode(skill));
+
         skillsList.appendChild(li);
     });
 }
@@ -141,6 +147,8 @@ function guardarDatos(event) {
         })
         .then(updatedData => {
             console.log('Datos actualizados:', updatedData);
+            alert('Usuario Actualizado')
+            window.location.href = 'indexAdmin.html';
         })
         .catch(error => {
             console.error('Hubo un problema al guardar los datos:', error);
