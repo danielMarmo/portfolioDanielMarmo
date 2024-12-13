@@ -6,11 +6,12 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
     <title>Portfolio</title>
-  <script type="module" crossorigin src="./assets/editCareer-DQ9Rcwrs.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/darkmode-xCpuG2kf.js">
-  <link rel="stylesheet" crossorigin href="./assets/darkmode-BRSul9ji.css">
+  <script type="module" crossorigin src="./assets/editCareer-BOPTRVZc.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/darkmode-QjJK9khg.js">
+  <link rel="stylesheet" crossorigin href="./assets/darkmode-DvdDeXJi.css">
 </head>
 
 <body>
@@ -25,34 +26,43 @@
     <main>
         <section>
             <form id="formularioTrabajos">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombreTrabajo" required>
+                <div class="input-field">
+                    <input type="text" id="nombreTrabajo" required>
+                    <label for="nombreTrabajo">Nombre</label>
+                </div>
 
-                <label for="fechaInicio">Fecha Inicio:</label>
-                <input type="date" id="fechaInicioTrabajo" required>
+                <div class="input-field">
+                    <input type="date" id="fechaInicioTrabajo" required>
+                    <label for="fechaInicioTrabajo">Fecha Inicio</label>
+                </div>
 
-                <label for="fechaFin">Fecha Fin:</label>
-                <input type="date" id="fechaFinTrabajo" required>
+                <div class="input-field">
+                    <input type="date" id="fechaFinTrabajo" required>
+                    <label for="fechaFinTrabajo">Fecha Fin</label>
+                </div>
 
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcionTrabajo" required></textarea>
+                <div class="input-field">
+                    <textarea id="descripcionTrabajo" class="materialize-textarea" required></textarea>
+                    <label for="descripcionTrabajo">Descripción</label>
+                </div>
 
-                <button type="submit">Guardar</button>
+                <button type="submit" class="btn waves-effect waves-light">Guardar</button>
             </form>
         </section>
 
         <h1>Trabajos</h1>
         <div class="trabajo">
-          <div id="plantillaTrabajo" class="d-none">
-            <h1 id="nombreTrabajo">nombre</h1>
-            <p id="fechaTrabajo">fecha</p>
-            <p id="descripcionTrabajo">descripcion</p>
-            <button class="edit-trabajo">Editar</button>
-            <button class="delete-trabajo">Eliminar</button>
-          </div>
+            <div id="plantillaTrabajo" class="d-none">
+                <h1 id="nombreTrabajo">nombre</h1>
+                <p id="fechaTrabajo">fecha</p>
+                <p id="descripcionTrabajo">descripcion</p>
+                <button class="edit-trabajo">Editar</button>
+                <button class="delete-trabajo">Eliminar</button>
+            </div>
         </div>
     </main>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </body>
 

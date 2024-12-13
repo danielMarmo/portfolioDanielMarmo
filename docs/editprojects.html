@@ -6,11 +6,13 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
+
     <title>Portfolio</title>
-  <script type="module" crossorigin src="./assets/editProjects-wphEicjy.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/darkmode-xCpuG2kf.js">
-  <link rel="stylesheet" crossorigin href="./assets/darkmode-BRSul9ji.css">
+  <script type="module" crossorigin src="./assets/editProjects-ClpjMN1M.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/darkmode-QjJK9khg.js">
+  <link rel="stylesheet" crossorigin href="./assets/darkmode-DvdDeXJi.css">
 </head>
 
 <body>
@@ -25,39 +27,58 @@
     <main>
         <section>
             <form id="formularioProyectos">
-                <label for="nombre">Nombre del Proyecto:</label>
-                <input type="text" id="nombre" required>
-
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" required></textarea>
-
-                <label for="repoURL">URL al repositorio:</label>
-                <input type="url" id="repoURL" required>
-
-                <label for="demoURL">URL a la demo:</label>
-                <input type="url" id="demoURL" required>
-
+                <div class="input-field">
+                    <input type="text" id="nombre" required>
+                    <label for="nombre">Nombre del Proyecto</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="descripcion" class="materialize-textarea" required></textarea>
+                    <label for="descripcion">Descripción</label>
+                </div>
+                <div class="input-field">
+                    <input type="url" id="repoURL" required>
+                    <label for="repoURL">URL al repositorio</label>
+                </div>
+                <div class="input-field">
+                    <input type="url" id="demoURL" required>
+                    <label for="demoURL">URL a la demo</label>
+                </div>
                 <fieldset>
                     <legend>Selecciona las tecnologías utilizadas:</legend>
-                    <label>
-                        <input type="checkbox" id="tecnologiaCSS"> CSS
-                    </label>
-                    <label>
-                        <input type="checkbox" id="tecnologiaHTML"> HTML
-                    </label>
-                    <label>
-                        <input type="checkbox" id="tecnologiaJS"> JavaScript
-                    </label>
-                    <label>
-                        <input type="checkbox" id="tecnologiaSASS"> SASS
-                    </label>
-                    <label>
-                        <input type="checkbox" id="tecnologiaVite"> Vite
-                    </label>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="tecnologiaCSS" />
+                            <span>CSS</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="tecnologiaHTML" />
+                            <span>HTML</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="tecnologiaJS" />
+                            <span>JavaScript</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="tecnologiaSASS" />
+                            <span>SASS</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="tecnologiaVite" />
+                            <span>Vite</span>
+                        </label>
+                    </p>
                 </fieldset>
-
-                <button type="submit">Guardar</button>
+                <button type="submit" class="btn waves-effect waves-light">Guardar</button>
             </form>
+
         </section>
 
         <h1>Mis proyectos</h1>
@@ -67,16 +88,17 @@
                 <p id="descripcionProyecto">descripcion</p>
                 <ul id="listadoTecnologiasProyecto"></ul>
                 <div class="btns">
-                    <a class="btn btn-github" id="githubProyecto">Github <i class="fa fa-github" aria-hidden="true"></i>
-                    </a>
-                    <a class="btn btn-demo" id="demoProyecto">Demo <i class="fa fa-arrow-right"></i></a>
+                    <a class="btn-project-edit btn-github" id="githubProyecto">Github <i class="fa fa-github"
+                            aria-hidden="true"></i></a>
+                    <a class="btn-project-edit btn-demo" id="demoProyecto">Demo <i class="fa fa-arrow-right"></i></a>
                 </div>
                 <button class="edit-project">Editar</button>
                 <button class="delete-project">Eliminar</button>
             </div>
         </div>
     </main>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </body>
 
