@@ -1,4 +1,4 @@
-import"./darkmode-Bbhyw87w.js";import"./index-deTBBjt9.js";document.getElementById("editToggle").addEventListener("click",function(o){o.preventDefault(),Swal.fire({title:"Identifícate",html:`
+import"./darkmode-DLURKbXn.js";import"./index-deTBBjt9.js";document.getElementById("editToggle").addEventListener("click",function(o){o.preventDefault(),Swal.fire({title:"Identifícate",html:`
             <input type="text" id="username" class="swal2-input" placeholder="Usuario">
             <input type="password" id="password" class="swal2-input" placeholder="Contraseña">
         `,confirmButtonText:"Iniciar sesión",customClass:{popup:"custom-modal",confirmButton:"login-btn"},focusConfirm:!1,preConfirm:()=>{const e=Swal.getPopup().querySelector("#username").value,t=Swal.getPopup().querySelector("#password").value;return(!e||!t)&&Swal.showValidationMessage("Por favor, ingresa usuario y contraseña"),{username:e,password:t}}}).then(e=>{if(e.isConfirmed){const{username:t,password:a}=e.value;t==="admin"&&a==="admin"?window.location.href="indexAdmin.html":Swal.fire({icon:"error",title:"Credenciales incorrectas",text:"Por favor, intenta de nuevo."})}})});

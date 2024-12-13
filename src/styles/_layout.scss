@@ -4,6 +4,15 @@ body.darkmode--activated {
     color: $text-color-dark;
     background-color: $background-color-dark;
 
+    .custom-modal {
+        background-color: $background-color-dark;
+        color: $text-color-dark;
+    }
+
+    .login-btn {
+        background-color: $tertiary-color-dark;
+    }
+    
     .text-tertiary {
         color: $tertiary-color-dark;
     }
@@ -60,15 +69,6 @@ body.darkmode--activated {
 
         #plantillaTrabajo {
             box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
-        }
-
-        .custom-modal {
-            background-color: $background-color-dark;
-            color: $text-color-dark;
-        }
-
-        .login-btn {
-            background-color: $tertiary-color-dark;
         }
 
         input,
