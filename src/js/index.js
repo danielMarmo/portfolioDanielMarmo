@@ -57,11 +57,11 @@ function procesarDatos(datos) {
     let github = document.querySelector("#github");
     github.setAttribute("href", datos.redesSociales.github);
 
-    let envelope = document.querySelector("#envelope");
-    envelope.setAttribute("href", datos.redesSociales.envelope);
+    let envelope = document.querySelector("#gmail");
+    envelope.setAttribute("href", datos.redesSociales.gmail);
 
-    let twitter = document.querySelector("#twitter");
-    twitter.setAttribute("href", datos.redesSociales.twitter);
+    let twitter = document.querySelector("#x");
+    twitter.setAttribute("href", datos.redesSociales.x);
     
     let listadoSkills = document.querySelector("#listadoSkills");
     listadoSkills.innerHTML = "";
