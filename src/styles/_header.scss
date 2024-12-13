@@ -1,0 +1,201 @@
+@use "globals" as *;
+
+.administracion {
+  margin-inline: $grid-margin;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+
+  @include respond-to("x-large") {
+    margin-inline: 10rem;
+  }
+
+  @include respond-to("large") {
+    margin-inline: 5rem;
+  }
+
+  @include respond-to("medium") {
+    margin-inline: 2rem;
+  }
+
+  @include respond-to("small") {
+    margin-inline: 1rem;
+    text-align: left;
+    padding-left: 1.5rem;
+  }
+
+
+  .nav-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
+
+    .back-btn,
+    .home-btn,
+    .darkMode-btn {
+      padding: 5px 10px;
+      border: 1px solid $secondary-color;
+      border-radius: 5px;
+    }
+  }
+}
+
+header {
+  margin-inline: $grid-margin;
+  display: grid;
+  grid-template-areas:
+    'Presentacion Presentacion Perfil'
+    'Descripcion Descripcion Perfil';
+  gap: $grid-gap;
+
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+
+  @include respond-to("x-large") {
+    margin-inline: 10rem;
+  }
+
+  @include respond-to("large") {
+    margin-inline: 5rem;
+  }
+
+  @include respond-to("medium") {
+    margin-inline: 2rem;
+  }
+
+  @include respond-to("small") {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 1rem;
+  }
+
+  div {
+    padding-inline: 1.5rem;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .presentacion {
+    grid-area: Presentacion;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .presentacion>* {
+    margin-bottom: 0;
+  }
+
+  .presentacion>*:first-child {
+    margin-top: 1.5rem;
+  }
+
+  .presentacion>*:last-child {
+    margin-bottom: 1.5rem;
+  }
+
+  .perfil {
+    position: relative;
+    padding-block: 1.5rem;
+    grid-area: Perfil;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .edit-btn {
+      padding: 5px 10px;
+      border: 1px solid $secondary-color;
+      border-radius: 5px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0.5rem;
+    }
+
+    .back-btn {
+      padding: 5px 10px;
+      border: 1px solid $secondary-color;
+      border-radius: 5px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0.5rem;
+    }
+
+    .darkMode-btn {
+      padding: 5px 10px;
+      border: 1px solid $secondary-color;
+      border-radius: 5px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 0.5rem;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      border: 1px solid $tertiary-color;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    p {
+      border: 1px solid $tertiary-color;
+      display: inline-block;
+      padding: 5px 20px;
+      border-radius: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      display: flex;
+
+      li {
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
+        padding: 8px 10px;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .descripcion {
+    grid-area: Descripcion;
+
+    #listadoSkills {
+      list-style: circle;
+      padding-left: 1rem;
+    }
+
+    #listadotecnologiasFavoritas {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      margin-bottom: 20px;
+      display: flex;
+
+      li {
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
+        padding: 8px 10px;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+      }
+    }
+  }
+}

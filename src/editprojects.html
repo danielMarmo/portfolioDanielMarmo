@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="administracion">
+        <div class="nav-btn">
+            <a href="indexAdmin.html" class="back-btn"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <a href="index.html" class="home-btn"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a id="darkModeToggle" class="darkMode-btn"></a>
+        </div>
+        <h1>Modo Administrador</h1>
+    </div>
+    <main>
+        <section>
+            <form id="formularioProyectos">
+                <label for="nombre">Nombre del Proyecto:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" required></textarea>
+
+                <label for="repoURL">URL al repositorio:</label>
+                <input type="url" id="repoURL" required>
+
+                <label for="demoURL">URL a la demo:</label>
+                <input type="url" id="demoURL" required>
+
+                <fieldset>
+                    <legend>Selecciona las tecnologías utilizadas:</legend>
+                    <label>
+                        <input type="checkbox" id="tecnologiaCSS"> CSS
+                    </label>
+                    <label>
+                        <input type="checkbox" id="tecnologiaHTML"> HTML
+                    </label>
+                    <label>
+                        <input type="checkbox" id="tecnologiaJS"> JavaScript
+                    </label>
+                    <label>
+                        <input type="checkbox" id="tecnologiaSASS"> SASS
+                    </label>
+                    <label>
+                        <input type="checkbox" id="tecnologiaVite"> Vite
+                    </label>
+                </fieldset>
+
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <h1>Mis proyectos</h1>
+        <div class="projects">
+            <div id="plantillaProyecto" class="d-none">
+                <h1 id="nombreProyecto">nombre</h1>
+                <p id="descripcionProyecto">descripcion</p>
+                <ul id="listadoTecnologiasProyecto"></ul>
+                <div class="btns">
+                    <a class="btn btn-github" id="githubProyecto">Github <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-demo" id="demoProyecto">Demo <i class="fa fa-arrow-right"></i></a>
+                </div>
+                <button class="edit-project">Editar</button>
+                <button class="delete-project">Eliminar</button>
+            </div>
+        </div>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script type="module" src="editprojects.js"></script>
+</body>
+
+</html>

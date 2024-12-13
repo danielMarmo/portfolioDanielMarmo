@@ -1,0 +1,35 @@
+{
+    "nombre": "Daniel Marín",
+    "proyectos": [
+        {
+            "nombre": "Proyecto Entrono Cliente RAWG",
+            "descripcion": "Web para ver juegos y plataformas, ver informacion sobre ellos y administrar nuestros juegos favoritos",
+            "tecnologias": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "github": "https://github.com/jagarcia05/ProyectoEntronoCliente",
+            "demo": "https://jagarcia05.github.io/ProyectoEntronoCliente/"
+        },
+            {
+                "nombre": "Web Personalizada con SASS y Vite",
+                "descripcion": "Web diseñada mediante figma y realizada mediante SASS y Vite",
+                "tecnologias": [
+                    "Vite",
+                    "SASS",
+                    "HTML"
+                ],
+                "github": "https://github.com/danielMarmo/P3.1-Maquetaci-n-Responsive-con-SASS-y-Vite",
+                "demo": "https://danielmarmo.github.io/P3.1-Maquetaci-n-Responsive-con-SASS-y-Vite/"
+            }
+    ],
+    "carrera": [
+        {
+            "nombre": "FCT-SMR CEIP Garcilaso de la Vega",
+            "fecha": "Marzo 2022- Junio 2022",
+            "descripcion": 
+                "Administracion de equipos, sistemas de datos de colegios."
+        }
+    ]
+}

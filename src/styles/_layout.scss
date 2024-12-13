@@ -1,0 +1,314 @@
+@use "globals" as *;
+
+body.darkmode--activated {
+    color: $text-color-dark;
+    background-color: $background-color-dark;
+
+    .text-tertiary {
+        color: $tertiary-color-dark;
+    }
+
+    header {
+        .presentacion {
+            #nombre {
+                color: $text-color-dark;
+            }
+        }
+
+        .perfil {
+            .edit-btn {
+                color: $text-color-dark;
+            }
+
+            #fotoPerfil {
+                border-color: $tertiary-color-dark;
+            }
+
+            #estado {
+                border-color: $tertiary-color-dark;
+            }
+        }
+    }
+
+    main {
+        .projects {
+            .btns {
+                a {
+                    color: $text-color-dark;
+                }
+            }
+        }
+    }
+
+
+    .custom-modal {
+        background-color: $background-color-dark;
+        color: $text-color-dark;
+    }
+
+    .login-btn {
+        background-color: $tertiary-color-dark;
+    }
+
+    a,
+    i {
+        color: $text-color-dark;
+    }
+
+    input,
+    textarea,
+    button {
+        color: $text-color-dark;
+        background-color: $background-color-dark;
+    }
+
+    button {
+        background-color: $tertiary-color-dark;
+    }
+
+    .edit-project,
+    .edit-trabajo {
+        background-color: #2196f3;
+    }
+
+    .delete-project,
+    .delete-trabajo {
+        background-color: #f44336;
+    }
+}
+
+body {
+    background-color: $background-color;
+    font-family: $family-text;
+    color: $text-color;
+}
+
+h1 {
+    font-size: $size-title;
+    font-weight: $weight-semibold;
+}
+
+p {
+    font-size: $size-paragraph;
+    font-weight: $weight-regular;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+.text-tertiary {
+    color: $tertiary-color;
+}
+
+.d-none {
+    display: none;
+}
+
+.custom-modal {
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.login-btn {
+    background-color: $tertiary-color;
+}
+
+.eliminar-btn {
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    text-align: center;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 1.5rem;
+    margin-inline: $grid-margin;
+
+    @include respond-to("x-large") {
+        margin-inline: 10rem;
+    }
+
+    @include respond-to("large") {
+        margin-inline: 5rem;
+    }
+
+    @include respond-to("medium") {
+        margin-inline: 2rem;
+    }
+
+    @include respond-to("small") {
+        margin-inline: 1rem;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $grid-gap;
+
+        @include respond-to("small") {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        #plantillaProyecto {
+            padding-inline: 1.5rem;
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+
+            * {
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 10px 0;
+                display: flex;
+
+                li {
+                    border: 1px solid $secondary-color;
+                    border-radius: 5px;
+                    padding: 8px 10px;
+                    margin: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    margin-left: 0;
+                }
+            }
+
+            .btns {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                box-sizing: border-box;
+                padding-bottom: 1.5rem;
+
+                .btn {
+                    text-align: center;
+                    display: inline-block;
+                    width: 35%;
+                    padding: 10px 20px;
+                    border: 1px solid $secondary-color;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .trabajo {
+        #plantillaTrabajo {
+            padding-inline: 1.5rem;
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
+
+            * {
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 10px 0;
+                display: flex;
+
+                li {
+                    border: 1px solid $secondary-color;
+                    border-radius: 5px;
+                    padding: 8px 10px;
+                    margin: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    margin-left: 0;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .btns {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                box-sizing: border-box;
+                padding-bottom: 1.5rem;
+
+                .btn {
+                    text-align: center;
+                    display: inline-block;
+                    width: 35%;
+                    padding: 10px 20px;
+                    border: 1px solid $secondary-color;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+form {
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    padding: 1.5rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    input,
+    textarea,
+    button {
+        padding: 0.5rem;
+    }
+
+    button {
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
+        background-color: $tertiary-color;
+    }
+}
+
+.edit-project,
+.edit-trabajo {
+    background-color: #2196f3;
+}
+
+.delete-project,
+.delete-trabajo {
+    background-color: #f44336;
+}
+
+.edit-project,
+.delete-project,
+.edit-trabajo,
+.delete-trabajo {
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 1.5rem;
+}

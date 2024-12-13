@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Portfolio</title>
+  <script type="module" crossorigin src="./assets/editCareer-DUdHK2d8.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/darkmode-Bcsfe4g-.js">
+  <link rel="stylesheet" crossorigin href="./assets/darkmode-BTxtS_EF.css">
+</head>
+
+<body>
+    <div class="administracion">
+        <div class="nav-btn">
+            <a href="indexAdmin.html" class="back-btn"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <a href="index.html" class="home-btn"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a id="darkModeToggle" class="darkMode-btn"></a>
+        </div>
+        <h1>Modo Administrador</h1>
+    </div>
+    <main>
+        <section>
+            <form id="formularioTrabajos">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombreTrabajo" required>
+
+                <label for="fechaInicio">Fecha Inicio:</label>
+                <input type="date" id="fechaInicioTrabajo" required>
+
+                <label for="fechaFin">Fecha Fin:</label>
+                <input type="date" id="fechaFinTrabajo" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcionTrabajo" required></textarea>
+
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <h1>Trabajos</h1>
+        <div class="trabajo">
+          <div id="plantillaTrabajo" class="d-none">
+            <h1 id="nombreTrabajo">nombre</h1>
+            <p id="fechaTrabajo">fecha</p>
+            <p id="descripcionTrabajo">descripcion</p>
+            <button class="edit-trabajo">Editar</button>
+            <button class="delete-trabajo">Eliminar</button>
+          </div>
+        </div>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</body>
+
+</html>

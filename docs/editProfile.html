@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Portfolio</title>
+  <script type="module" crossorigin src="./assets/editProfile-DSpLM7sE.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/darkmode-Bcsfe4g-.js">
+  <link rel="stylesheet" crossorigin href="./assets/darkmode-BTxtS_EF.css">
+</head>
+
+<body>
+    <div class="administracion">
+        <div class="nav-btn">
+            <a href="indexAdmin.html" class="back-btn"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <a href="index.html" class="home-btn"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a id="darkModeToggle" class="darkMode-btn"></a>
+        </div>
+        <h1>Modo Administrador</h1>
+    </div>
+    <main>
+        <section>
+            <form id="formularioPerfil">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" required>
+
+                <label for="puesto">Puesto</label>
+                <input type="text" id="puesto" required>
+
+                <label for="ubicacion">Ubicacion</label>
+                <input type="text" id="ubicacion" required>
+
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" placeholder="Estudiante/Trabajando" required>
+
+                <label for="fotoPerfil">URL Foto de Perfil</label>
+                <input type="url" id="fotoPerfil" required>
+
+                <label for="linkedin">Linkedin</label>
+                <input type="url" id="linkedin" required>
+
+                <label for="github">Github</label>
+                <input type="url" id="github" required>
+
+                <label for="gmail">Gmail</label>
+                <input type="gmail" id="gmail" required>
+
+                <label for="x">X</label>
+                <input type="url" id="x" required>
+
+                <label for="tecnologias">Tecnologías <button type="button" onclick="agregarTecnologia()">Agregar Tecnología</button></label>
+                <input type="text" id="nuevaTecnologia" placeholder="Agregar nueva tecnología">
+                <ul id="tecnologias"></ul>
+
+                <label for="skills">Habilidades <button type="button" onclick="agregarHabilidad()">Agregar Habilidad</button></label>
+                <input type="text" id="nuevaHabilidad" placeholder="Agregar nueva habilidad">
+                
+                <ul id="skills"></ul>
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</body>
+
+</html>
