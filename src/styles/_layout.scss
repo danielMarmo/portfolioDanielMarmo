@@ -8,7 +8,21 @@ body.darkmode--activated {
         color: $tertiary-color-dark;
     }
 
+    a,
+    i {
+        color: $text-color-dark;
+    }
+    
+    .administracion {
+        box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+    }
+
     header {
+
+        div {
+            box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+        }
+
         .presentacion {
             #nombre {
                 color: $text-color-dark;
@@ -32,48 +46,51 @@ body.darkmode--activated {
 
     main {
         .projects {
-            .btns {
-                a {
-                    color: $text-color-dark;
+
+            #plantillaProyecto {
+                box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+
+                .btns {
+                    a {
+                        color: $text-color-dark;
+                    }
                 }
             }
         }
-    }
 
+        #plantillaTrabajo {
+            box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+        }
 
-    .custom-modal {
-        background-color: $background-color-dark;
-        color: $text-color-dark;
-    }
+        .custom-modal {
+            background-color: $background-color-dark;
+            color: $text-color-dark;
+        }
 
-    .login-btn {
-        background-color: $tertiary-color-dark;
-    }
+        .login-btn {
+            background-color: $tertiary-color-dark;
+        }
 
-    a,
-    i {
-        color: $text-color-dark;
-    }
+        input,
+        textarea,
+        button {
+            color: $text-color-dark;
+            background-color: $background-color-dark;
+        }
 
-    input,
-    textarea,
-    button {
-        color: $text-color-dark;
-        background-color: $background-color-dark;
-    }
+        button {
+            background-color: $tertiary-color-dark;
+        }
 
-    button {
-        background-color: $tertiary-color-dark;
-    }
+        .edit-project,
+        .edit-trabajo {
+            background-color: #2196f3;
+        }
 
-    .edit-project,
-    .edit-trabajo {
-        background-color: #2196f3;
-    }
-
-    .delete-project,
-    .delete-trabajo {
-        background-color: #f44336;
+        .delete-project,
+        .delete-trabajo {
+            background-color: #f44336;
+        }
     }
 }
 
