@@ -9,6 +9,7 @@
 
 - **Repositorio en GitHub**: [portfolioDanielMarmo](https://github.com/danielMarmo/portfolioDanielMarmo)
 - **Demo en Vivo**: [Ver Proyecto](https://danielmarmo.github.io/portfolioDanielMarmo)
+- **Diseño en Figma**: [Figma](https://www.figma.com/design/SR94MGxfogWbwI3YYmvJjx/Untitled?node-id=23-424&t=lBIkwtUNtsdqoOAW-1)
 
 ## Tecnologías Utilizadas
 
